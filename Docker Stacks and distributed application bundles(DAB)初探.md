@@ -389,7 +389,6 @@ dockercoins_worker scaled to 1
 
 ### 总结
 我们基本上已经完成Docker Stack和DAB的初探，也对比了Docker 1.12和Docker1.13的差异
-在Docker1.13中Stack功能是吸引大家去升(tian)级(keng)到新版的Docker Engine了
-DAB和Docker-compose v3都还有很多地方需要完善，比如volume的支持等
+在Docker1.13中Stack功能是很吸引大家去升(tian)级(keng)到新版的Docker Engine的。当然DAB和Docker-compose v3都还有很多地方需要完善  
 Docker越来越完善的生态链和工具链，已经把容器编排做得越来越简单了（相对于k8s来说）
 未来会怎么样呢？让我们拭目以待
