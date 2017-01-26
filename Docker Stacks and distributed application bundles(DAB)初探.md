@@ -276,7 +276,7 @@ Creating service dockercoins_hasher
 可见在Docker 1.13版本中，这个PublishedPort是可以在yml文件中指定的
 这个在Docker 1.12实验版本中，这个端口是自动分配的。
 访问30001对应的webui应用,成功
-![DockerCoin](./pic/1.PNG)
+![DockerCoin](DockerStack-DAB/IMG_20170126_090732.jpg)
 
 在Docker 1.13中，可以直接使用docker-compose.yml文件来deploy，先删除已创建的stack，再测试如下：
 ```bash
@@ -338,7 +338,7 @@ hxptm5aw16ci  dockercoins_hasher.1  jpetazzo/dockercoins_hasher:1465439244  Swar
 ### 访问应用
 http://100.101.21.237:8000/
 
-![DockerCoins-8000](./pic/2.PNG)
+![DockerCoins-8000](DockerStack-DAB/IMG_20170126_091036.jpg)
 
 ### 服务扩展
 使用docker service scale实现服务的在线手动扩展,再查看service和stack信息
@@ -363,7 +363,7 @@ hxptm5aw16ci  dockercoins_hasher.1  jpetazzo/dockercoins_hasher:1465439244  Swar
 ```
 可见名为dockercoins_worker.2的容器作为worker服务的第二个副本在SwarmNode2上运行
 **访问测试**
-![DockerCoin-2Workers](./pic/3.PNG)
+![DockerCoin-2Workers](DockerStack-DAB/IMG_20170126_091210.jpg)
 
 经过服务扩展后，每秒生成的Docker币由4个变为了8个
 我又试着把worker变成4个，之后又试着变成1个
@@ -383,7 +383,7 @@ dwbe1lh3em1l  dockercoins_worker.4  jpetazzo/dockercoins_worker:1465439244  Swar
 [root@SwarmManager dockercoin]# docker service scale dockercoins_worker=1
 dockercoins_worker scaled to 1
 ```
-![DockerCoin-4to1Workers](./pic/4.PNG)
+![DockerCoin-4to1Workers](DockerStack-DAB/IMG_20170126_091308.jpg)
 
 ### 总结
 我们基本上已经完成Docker Stack和DAB的初探，也对比了Docker 1.12和Docker1.13的差异
