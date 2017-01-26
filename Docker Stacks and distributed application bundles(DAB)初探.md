@@ -136,7 +136,8 @@ networks:
 
 
 ```
->注意，这里redis我们用latest镜像，在默认jpetazzo大神的[docker-compose.yml](https://github.com/jpetazzo/orchestration-workshop/tree/master/dockercoins)文件中是没有暴露redis的端口的，我调试了很久都报错  最后加入了ports - "6379:6379"才成功
+>注意，这里redis我们用latest镜像，在默认jpetazzo大神的[docker-compose.yml](https://github.com/jpetazzo/orchestration-workshop/tree/master/dockercoins)文件中是没有暴露redis的端口的，我调试了很久都报错     
+>最后加入了ports - "6379:6379"才成功
 
 ```
 Redis error { [Error: Redis connection to redis:6379 failed - getaddrinfo ENOTFOUND redis redis:6379]
@@ -273,8 +274,8 @@ Creating service dockercoins_hasher
 [root@SwarmManager dockercoin]# docker service inspect dockercoins_webui |grep PublishedPort
                     "PublishedPort": 30001,
 ```
-可见在Docker 1.13版本中，这个PublishedPort是可以在yml文件中指定的
-这个在Docker 1.12实验版本中，这个端口是自动分配的。
+可见在Docker 1.13版本中，这个PublishedPort是可以在yml文件中指定的      
+这个在Docker 1.12实验版本中，这个端口是自动分配的。       
 访问30001对应的webui应用,成功
 ![DockerCoin](IMG_20170126_090732.jpg)
 
@@ -362,6 +363,7 @@ hxptm5aw16ci  dockercoins_hasher.1  jpetazzo/dockercoins_hasher:1465439244  Swar
 57r5coa7zpxv  dockercoins_worker.2  jpetazzo/dockercoins_worker:1465439244  SwarmNode2    Running        Running less than a second ago  
 ```
 可见名为dockercoins_worker.2的容器作为worker服务的第二个副本在SwarmNode2上运行
+
 **访问测试**
 ![DockerCoin-2Workers](IMG_20170126_091210.jpg)
 
