@@ -96,7 +96,7 @@ qaj13t4dlbpd4ez4rgbzjadfh    SwarmNode2    Ready   Active
 **Compose文件**
 ```bash
 [root@SwarmManager dockercoin]# cat docker-compose.yml
-version: "3"
+version: "2"
 services:
   rng:
     image: jpetazzo/dockercoins_rng:1465439244
