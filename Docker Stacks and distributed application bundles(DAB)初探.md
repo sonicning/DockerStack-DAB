@@ -254,7 +254,7 @@ total 8
 需要注意的是，DAB目前（在Docker 1.12中）仅仅支持Expose的端口，Published的端口会自动分配（从30000端口开始），不支持自定义，不过在后面我们可以手动来修改。
 
 ### 部署Stack
-使用docker deploy来部署dockercoin这个stack的时候会报错，因为我们使用的不是实验性的docker daemon [参加前文这里](#version)
+使用docker deploy来部署dockercoin这个stack的时候会报错，因为我们使用的不是实验性的docker daemon [参考前文这里](#version)
 ```bash
 [root@SwarmManager dockercoin]# docker deploy dockercoins
 only supported with experimental daemon
